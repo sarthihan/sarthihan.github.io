@@ -1,14 +1,14 @@
 /*-----------------------------------------------------------------------------------
 	AR Systems
-	About: A shiny new Blocs website.
+	About: AR Systems a website creating service for a negotiable fee.Static Websites only
 	Author: Arthihan Senthuran
-	Version: 1.0
+	Version: 1.2.1
 	Built with Blocs
 -----------------------------------------------------------------------------------*/
 body{
 	margin:0;
 	padding:0;
-    background:#FFFFFF;
+    background:transparent;
     overflow-x:hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -248,6 +248,19 @@ button{
 	outline: none!important;
 }
 
+.btn-rd{
+	border-radius: 40px;
+}
+.btn-glossy{
+	border:1px solid rgba(0,0,0,.09);
+	border-bottom-color:rgba(0,0,0,.2);
+	text-shadow:0 1px 0 rgba(0,0,1,.2);
+	box-shadow: 0 1px 3px rgba(0,0,1,.35), inset 0 1px 0 0 rgba(255,255,255,.4), inset 0 1px 0 2px rgba(255,255,255,.08);
+	background-image: -moz-linear-gradient(bottom, rgba(0,0,0,.07) 0%, rgba(255,255,255,.07) 100%);
+	 background-image: -o-linear-gradient(bottom, rgba(0,0,0,.07) 0%, rgba(255,255,255,.07) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.07) 0%, rgba(255,255,255,.07) 100%);
+	background-image: linear-gradient(bottom, rgba(0,0,0,.07) 0%, rgba(255,255,255,.07) 100%);
+}
 
 /* = Icons
 -------------------------------------------------------------- */
@@ -277,11 +290,11 @@ button{
 
 /* = Text & Icon Styles
 -------------------------------------------------------------- */
+.pressed-t{
+	text-shadow:0 1px 0 #FFF;
+}
 .glow-t{
 	text-shadow:0 0 10px #FFF;
-}
-.threeD-t{
-	text-shadow:0 1px 0 #ccc,0 2px 0 #c9c9c9,0 3px 0 #bbb,0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25),0 20px 20px rgba(0,0,0,.15);
 }
 
 
@@ -352,7 +365,7 @@ button{
 -------------------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6,p,label,.btn,a{
-	font-family:"Helvetica";
+	font-family:"Lato";
 }
 .container{
 	max-width:1140px;
@@ -484,6 +497,32 @@ url("img/milad-fakurian-UYgrVfIhBec-unsplash.webp") 2x);
 .btn-2-style{
 	border-radius:25px 25px 25px 25px;
 }
+.p-bloc-2-style{
+	font-family:"Lato";
+	font-weight:300;
+}
+.h2-bloc-3-style{
+	font-family:"Lato";
+	background-color:transparent;
+}
+.p-bloc-3-style{
+	font-family:"Lato";
+	font-weight:300;
+}
+.h2-bloc-4-style{
+	font-family:"Lato";
+}
+.p-bloc-4-style{
+	font-family:"Lato";
+	font-weight:300;
+}
+.h2-bloc-5-style{
+	font-family:"Lato";
+}
+.p-bloc-5-style{
+	font-family:"Lato";
+	font-weight:300;
+}
 
 /* = Colour
 -------------------------------------------------------------- */
@@ -520,9 +559,6 @@ url("img/milad-fakurian-UYgrVfIhBec-unsplash.webp") 2x);
 }
 .tc-1792{
 	color:var(--swatch-var-1792)!important;
-}
-.tc-458{
-	color:var(--swatch-var-458)!important;
 }
 
 /* Button colour styles */
