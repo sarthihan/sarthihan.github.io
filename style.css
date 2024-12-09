@@ -1,14 +1,14 @@
 /*-----------------------------------------------------------------------------------
 	AR Systems
-	About: A WebSite of arpro89. We Build Websites and app Designs
+	About: A website showcasing AR Systems and other things related to arpro89
 	Author: arpro89
-	Version: 3.1
+	Version: 9.12.2024
 	Built with Blocs
 -----------------------------------------------------------------------------------*/
 body{
 	margin:0;
 	padding:0;
-    background:rgba(255,255,255,0.01);
+    background:#000000;
     overflow-x:hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -87,6 +87,43 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	align-self: flex-end;
 }
 
+/* = Full Width Blocs 
+-------------------------------------------------------------- */
+
+.full-width-bloc{
+	padding-left:0;
+	padding-right:0;
+}
+.full-width-bloc .row{
+	margin-left:0;
+	margin-right:0;
+}
+.full-width-bloc .container{
+	width:100%;
+	max-width:100%!important;
+}
+.full-width-bloc .carousel img{
+	width:100%;
+	height:auto;
+}
+
+
+/* Background Textures */
+
+.bloc-bg-texture::before{
+	content:"";
+	background-size: 2px 2px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left:0;
+	right:0;
+}
+.texture-paper::before{
+	background: url("img/texture-paper.png");
+	background-size: 280px 280px;
+}
+
 
 /* Dark theme */
 
@@ -134,6 +171,35 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	color:rgba(0,0,0,1);
 }
 .d-bloc .card .btn-wire, .d-bloc .card .btn-wire:hover{
+	color:rgba(0,0,0,.7);
+	border-color:rgba(0,0,0,.3);
+}
+
+
+/* Light theme */
+
+.d-bloc .card,.l-bloc{
+	color:rgba(0,0,0,.5);
+}
+.d-bloc .card button:hover,.l-bloc button:hover{
+	color:rgba(0,0,0,.7);
+}
+.l-bloc .icon-round,.l-bloc .icon-square,.l-bloc .icon-rounded,.l-bloc .icon-semi-rounded-a,.l-bloc .icon-semi-rounded-b{
+	border-color:rgba(0,0,0,.7);
+}
+.d-bloc .card .divider-h span,.l-bloc .divider-h span{
+	border-color:rgba(0,0,0,.1);
+}
+.d-bloc .card .a-btn,.l-bloc .a-btn,.l-bloc .navbar a,.l-bloc a .icon-sm, .l-bloc a .icon-md, .l-bloc a .icon-lg, .l-bloc a .icon-xl, .l-bloc h1 a, .l-bloc h2 a, .l-bloc h3 a, .l-bloc h4 a, .l-bloc h5 a, .l-bloc h6 a, .l-bloc p a{
+	color:rgba(0,0,0,.6);
+}
+.d-bloc .card .a-btn:hover,.l-bloc .a-btn:hover,.l-bloc .navbar a:hover, .l-bloc a:hover .icon-sm, .l-bloc a:hover .icon-md, .l-bloc a:hover .icon-lg, .l-bloc a:hover .icon-xl, .l-bloc h1 a:hover, .l-bloc h2 a:hover, .l-bloc h3 a:hover, .l-bloc h4 a:hover, .l-bloc h5 a:hover, .l-bloc h6 a:hover, .l-bloc p a:hover{
+	color:rgba(0,0,0,1);
+}
+.l-bloc .navbar-toggle .icon-bar{
+	color:rgba(0,0,0,.6);
+}
+.d-bloc .card .btn-wire,.d-bloc .card .btn-wire:hover,.l-bloc .btn-wire,.l-bloc .btn-wire:hover{
 	color:rgba(0,0,0,.7);
 	border-color:rgba(0,0,0,.3);
 }
@@ -230,13 +296,9 @@ button{
 	outline: none!important;
 }
 
-.btn-wire{
-	background:transparent!important;
-	border:2px solid transparent;
-}
-.btn-wire:hover{
-	background:transparent!important;
-	border:2px solid transparent;
+.btn-xl{
+	padding: 16px 40px;
+	font-size: 28px;
 }
 
 /* = Icons
@@ -247,6 +309,22 @@ button{
 .icon-xl{
 	font-size:100px!important;
 }
+.icon-rounded{
+	margin:0 auto;
+	border:2px solid transparent;
+	border-radius: 6px;
+	padding: 32px 30px 26px 30px;
+	min-width:80px;
+}
+.icon-round.icon-md,.icon-square.icon-md,.icon-rounded.icon-md{
+	min-width: 92px;
+}
+.icon-round.icon-lg,.icon-square.icon-lg,.icon-rounded.icon-lg{
+	min-width: 122px;
+}
+.icon-round.icon-xl,.icon-square.icon-xl,.icon-rounded.icon-xl{
+	min-width: 162px;
+}
 
 
 /* = Text & Icon Styles
@@ -256,8 +334,6 @@ button{
 }
 
 
-/* = Cards
--------------------------------------------------------------- */
 .card-sq, .card-sq .card-header, .card-sq .card-footer{
 	border-radius:0;
 }
@@ -320,58 +396,6 @@ button{
 	fill-rule: evenodd;
 	stroke-linecap:round;
 }
-/* = iPhone 11 & 12 Devices
--------------------------------------------------------------- */
-
-.blocsapp-device-iphone11,.blocsapp-device-iphone12{
-	background-repeat:no-repeat;
-	background-size:contain;
-	background-position:center;
-	display: block;
-	width:100%;
-	height:auto;
-	padding: 9.6%;
-	position: relative;
-}
-.blocsapp-device-iphone11::after,.blocsapp-device-iphone12::after{
-	content:"";
-	position:absolute;
-	width:100%;
-	height:5%;
-	left:0;
-	top:5%;
-	margin-top:-0.5%;
-	background-repeat:no-repeat;
-	background-size:40%;
-	background-position:top center;
-	background-image:url("img/iphone-notch.png");
-	background-image: -webkit-image-set(url("img/iphone-notch.webp") 1x,
-url("img/iphone-notch.webp") 2x);background-image: image-set(url("img/iphone-notch.png") 1x,
-url("img/iphone-notch.png") 2x,url("img/iphone-notch.webp") 1x,
-url("img/iphone-notch.webp") 2x);
-}
-.blocsapp-device-iphone11 img,.blocsapp-device-iphone12 img{
-	width:100%;
-	height:auto;
-	margin: 0 auto;
-	border-radius:9%/4%;
-}
-.blocsapp-device-iphone11 .ratio::before,.blocsapp-device-iphone12 .ratio::before{
-	padding-top: 106.25%;
-}
-.blocsapp-device-iphone11 .ratio,.blocsapp-device-iphone12 .ratio{
-	padding-bottom: 90%;
-	width: 90.0%;
-	right: -5%;
-	border-radius: 2%/3%;
-}
-.blocsapp-device-iphone11.iphone11-white{
-	background-image:url("img/Apple-iPhone-11-White.png");
-	background-image: -webkit-image-set(url("img/Apple-iPhone-11-White.webp") 1x,
-url("img/Apple-iPhone-11-White.webp") 2x);background-image: image-set(url("img/Apple-iPhone-11-White.png") 1x,
-url("img/Apple-iPhone-11-White.png") 2x,url("img/Apple-iPhone-11-White.webp") 1x,
-url("img/Apple-iPhone-11-White.webp") 2x);
-}
 
 /* = Custom Styling
 -------------------------------------------------------------- */
@@ -383,87 +407,150 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	max-width:1140px;
 }
 .hero-header-text{
-	font-size:200px;
-	font-weight:300;
-	width:100%;
-	font-family:"Lato";
+	font-size:222px;
+	font-weight:bold;
+	font-family:"Pacifico";
 }
 .hero-subheader{
-	font-size:35px;
-	font-weight:300;
-	font-family:"Lato";
+	font-size:42px;
+	font-weight:normal;
 }
-.pink-bg-gradient{
-	background:linear-gradient(140deg, #FF007F, #9255F8);
+.green-bg-gradient{
+	background-color:var(--swatch-var-6521);
+	background:linear-gradient(0deg, #0EACE2 0%, #FF3EF0 100%);
 }
 .text-trans-gradient{
 	background-clip:text!important;
 	-webkit-background-clip:text!important;
-	background:linear-gradient(0deg, transparent 0%, #FFFFFF 100);
+	background:linear-gradient(0deg, rgba(255,255,255,0.0), #FFFFFF);
 	color:transparent!important;
 }
-.blur{
-	backdrop-filter:blur(30px);
-	-webkit-backdrop-filter:blur(30px);
-}
-.round{
-	border-radius:60px 60px 60px 60px;
-}
-.h3-style{
+.link-style{
 	font-family:"Lato";
 	font-weight:300;
 }
-.h1-style{
+.gradient-hero{
 	font-family:"Lato";
-	font-weight:700;
+	font-weight:300;
+	color:var(--swatch-var-1792)!important;
 }
-.btn-style{
-	border-radius:21px 21px 21px 21px;
-}
-.app-shadow{
-	box-shadow:0px 31px 35px rgba(0,0,0,0.16),0px 0px 2px rgba(0,0,0,0.09);
-}
-.feat-sub-header{
+.navbar-logo{
+	text-transform:none;
+	text-decoration:none;
 	font-size:20px;
 }
-.feat-header{
-	font-weight:bold;
+.img-style{
+	border-radius:38px 38px 38px 38px;
 }
-.purple-gradient-bg{
-	background:linear-gradient(274deg, #9809FF  0%, #8B74FD 100%);
+.h2-style{
+	font-family:"Lato";
+	font-weight:700;
+	font-size:40px;
 }
-.cta-card{
-	padding:60px 60px 0px 60px;
-	border-radius:30px 30px 30px 30px;
+.p-style{
+	font-family:"Lato";
+	font-weight:300;
+	font-size:21px;
 }
-.white-btn{
-	color:#9713FE!important;
-	font-size:16px;
+.bg1{
+	background-image:url("img/ilgmyzin-_wq0BYY-h9Y-unsplash.jpg");
+	background-image: -webkit-image-set(url("img/ilgmyzin-_wq0BYY-h9Y-unsplash.webp") 1x,
+url("img/ilgmyzin-_wq0BYY-h9Y-unsplash.webp") 2x);background-image: image-set(url("img/ilgmyzin-_wq0BYY-h9Y-unsplash.jpg") 1x,
+url("img/ilgmyzin-_wq0BYY-h9Y-unsplash.jpg") 2x,url("img/ilgmyzin-_wq0BYY-h9Y-unsplash.webp") 1x,
+url("img/ilgmyzin-_wq0BYY-h9Y-unsplash.webp") 2x);
+	background-size:length;
 }
-.btn-2-style{
-	border-radius:19px 19px 19px 19px;
+.ui1{
+	backdrop-filter:blur(0px);
+	-webkit-backdrop-filter:blur(0px);
 }
-.feat-card-icon{
-	width:50px;
-	background:linear-gradient(0deg, #9809FF 0%, #8B45FD 100%);
-	border-radius:10px 10px 10px 10px;
-}
-.feat-card-icon-pos{
-	position:absolute;
-	left:0px;
-	right:0px;
-	top:-25px;
-}
-.feat-card{
-	margin-bottom:80px;
-	padding:10px 10px 10px 10px;
+.bg2{
+	backdrop-filter:blur(35px);
+	-webkit-backdrop-filter:blur(35px);
 	border-radius:20px 20px 20px 20px;
-	backdrop-filter:blur(60px);
-	-webkit-backdrop-filter:blur(60px);
-	top:0px;
-	right:0px;
-	left:0px;
-	bottom:0px;
+}
+.p-2-style{
+	font-size:22px;
+	font-family:"Lato";
+	font-weight:100;
+}
+.h2-2-style{
+	font-size:60px;
+	font-family:"Poppins";
+	font-weight:500;
+}
+.h3-style{
+	font-size:30px;
+	font-family:"Lato";
+	font-weight:300;
+}
+.img-492-1x-shots--style{
+	border-radius:31px 31px 31px 31px;
+}
+.bg3{
+	background-image:url("img/milad-fakurian-odHBAXMaUA0-unsplash.jpg");
+	background-image: -webkit-image-set(url("img/milad-fakurian-odHBAXMaUA0-unsplash.webp") 1x,
+url("img/milad-fakurian-odHBAXMaUA0-unsplash.webp") 2x);background-image: image-set(url("img/milad-fakurian-odHBAXMaUA0-unsplash.jpg") 1x,
+url("img/milad-fakurian-odHBAXMaUA0-unsplash.jpg") 2x,url("img/milad-fakurian-odHBAXMaUA0-unsplash.webp") 1x,
+url("img/milad-fakurian-odHBAXMaUA0-unsplash.webp") 2x);
+	background-size:cover;
+}
+.font1{
+	color:#FFFCFC!important;
+	border-radius:25px 25px 25px 25px;
+}
+.img-66-1x-shots--style{
+	border-radius:31px 31px 31px 31px;
+}
+.h2-bloc-3-style{
+	font-size:58px;
+}
+.p-bloc-3-style{
+	font-size:19px;
+}
+.h3-bloc-3-style{
+	font-size:29px;
+}
+.btn-style{
+	border-radius:25px 25px 25px 25px;
+}
+.bg4{
+	background-size:cover;
+	background-position:center top;
+	background-origin:initial;
+	background-image:url("img/feey-hox5AvbFZFo-unsplash.jpg");
+	background-image: -webkit-image-set(url("img/feey-hox5AvbFZFo-unsplash.webp") 1x,
+url("img/feey-hox5AvbFZFo-unsplash.webp") 2x);background-image: image-set(url("img/feey-hox5AvbFZFo-unsplash.jpg") 1x,
+url("img/feey-hox5AvbFZFo-unsplash.jpg") 2x,url("img/feey-hox5AvbFZFo-unsplash.webp") 1x,
+url("img/feey-hox5AvbFZFo-unsplash.webp") 2x);
+}
+.font3{
+	background-color:transparent;
+	color:#F4F3F3!important;
+}
+.btn{
+	backdrop-filter:blur(34px);
+	-webkit-backdrop-filter:blur(34px);
+	border-color:#FFFFFF!important;
+	border-style:solid;
+}
+.img-518-1x-shots--style{
+	border-radius:27px 27px 27px 27px;
+}
+.bg5{
+	backdrop-filter:blur(43px);
+	-webkit-backdrop-filter:blur(43px);
+	background-color:transparent;
+	background:linear-gradient(0deg, transparent 0%, transparent 100%);
+}
+.text2{
+	backdrop-filter:blur(30px);
+	-webkit-backdrop-filter:blur(30px);
+	border-radius:25px 25px 25px 25px;
+	color:#F9F9F9!important;
+}
+.btn-button-style{
+	border-radius:38px 38px 38px 38px;
 }
 
 /* = Colour
@@ -472,49 +559,20 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 /* Swatch Variables */
 :root{
 	
-	--swatch-var-1792:#FFFFFF;
+	--swatch-var-1792:rgba(255,255,255,1.00);
 	
-	--swatch-var-6521:rgba(255,255,255,0.498039);
+	--swatch-var-6521:rgba(18,74,255,0.50);
 	
-	--swatch-var-426:rgba(255,255,255,0.8);
-	
-	--swatch-var-458:#000000;
-	
-	--swatch-var-3202:rgba(0,0,0,0.03);
+	--swatch-var-1869:rgba(0,0,0,0.7);
 	
 }
 
 
-/* Background colour styles */
-
-.bgc-3202{
-	background-color:var(--swatch-var-3202);
-}
 
 /* Text colour styles */
 
-.tc-6521{
-	color:var(--swatch-var-6521)!important;
-}
-.tc-426{
-	color:var(--swatch-var-426)!important;
-}
 .tc-1792{
 	color:var(--swatch-var-1792)!important;
-}
-.tc-458{
-	color:var(--swatch-var-458)!important;
-}
-
-/* Button colour styles */
-
-.btn-c-1792{
-	background:var(--swatch-var-1792);
-	color:rgba(0,0,0,.5)!important;
-}
-.btn-c-1792:hover{
-	background:#CCCCCC!important;
-	color:rgba(0,0,0,.5)!important;
 }
 
 /* Link colour styles */
@@ -532,64 +590,31 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	color:var(--swatch-var-1792)!important;
 	border-color:var(--swatch-var-1792)!important;
 }
-.icon-458{
-	color:var(--swatch-var-458)!important;
-	border-color:var(--swatch-var-458)!important;
-}
 
 /* Bloc image backgrounds */
 
-.bg-aperture-vintage-3FS0H6gB3uY-unsplash{
-	background-image:url("img/aperture-vintage-3FS0H6gB3uY-unsplash.jpg");
-	background-image: -webkit-image-set(url("img/aperture-vintage-3FS0H6gB3uY-unsplash.webp") 1x,
-url("img/aperture-vintage-3FS0H6gB3uY-unsplash.webp") 2x);background-image: image-set(url("img/aperture-vintage-3FS0H6gB3uY-unsplash.jpg") 1x,
-url("img/aperture-vintage-3FS0H6gB3uY-unsplash.jpg") 2x,url("img/aperture-vintage-3FS0H6gB3uY-unsplash.webp") 1x,
-url("img/aperture-vintage-3FS0H6gB3uY-unsplash.webp") 2x);
+.bg-benjamin-chambon-WNHmSNPwGHg-unsplash{
+	background-image:url("img/benjamin-chambon-WNHmSNPwGHg-unsplash.jpg");
+	background-image: -webkit-image-set(url("img/benjamin-chambon-WNHmSNPwGHg-unsplash.webp") 1x,
+url("img/benjamin-chambon-WNHmSNPwGHg-unsplash.webp") 2x);background-image: image-set(url("img/benjamin-chambon-WNHmSNPwGHg-unsplash.jpg") 1x,
+url("img/benjamin-chambon-WNHmSNPwGHg-unsplash.jpg") 2x,url("img/benjamin-chambon-WNHmSNPwGHg-unsplash.webp") 1x,
+url("img/benjamin-chambon-WNHmSNPwGHg-unsplash.webp") 2x);
 }
-.bg-pramod-tiwari-2JMKvS2qT9c-unsplash{
-	background-image:url("img/pramod-tiwari-2JMKvS2qT9c-unsplash.jpg");
-	background-image: -webkit-image-set(url("img/pramod-tiwari-2JMKvS2qT9c-unsplash.webp") 1x,
-url("img/pramod-tiwari-2JMKvS2qT9c-unsplash.webp") 2x);background-image: image-set(url("img/pramod-tiwari-2JMKvS2qT9c-unsplash.jpg") 1x,
-url("img/pramod-tiwari-2JMKvS2qT9c-unsplash.jpg") 2x,url("img/pramod-tiwari-2JMKvS2qT9c-unsplash.webp") 1x,
-url("img/pramod-tiwari-2JMKvS2qT9c-unsplash.webp") 2x);
+.bg-jigar-panchal-OCRPjESHKEY-unsplash{
+	background-image:url("img/jigar-panchal-OCRPjESHKEY-unsplash.jpg");
+	background-image: -webkit-image-set(url("img/jigar-panchal-OCRPjESHKEY-unsplash.webp") 1x,
+url("img/jigar-panchal-OCRPjESHKEY-unsplash.webp") 2x);background-image: image-set(url("img/jigar-panchal-OCRPjESHKEY-unsplash.jpg") 1x,
+url("img/jigar-panchal-OCRPjESHKEY-unsplash.jpg") 2x,url("img/jigar-panchal-OCRPjESHKEY-unsplash.webp") 1x,
+url("img/jigar-panchal-OCRPjESHKEY-unsplash.webp") 2x);
 }
-.bg-aperture-vintage-lQTpCiZHYlU-unsplash-1{
-	background-image:url("img/aperture-vintage-lQTpCiZHYlU-unsplash-1.jpg");
-	background-image: -webkit-image-set(url("img/aperture-vintage-lQTpCiZHYlU-unsplash-1.webp") 1x,
-url("img/aperture-vintage-lQTpCiZHYlU-unsplash-1.webp") 2x);background-image: image-set(url("img/aperture-vintage-lQTpCiZHYlU-unsplash-1.jpg") 1x,
-url("img/aperture-vintage-lQTpCiZHYlU-unsplash-1.jpg") 2x,url("img/aperture-vintage-lQTpCiZHYlU-unsplash-1.webp") 1x,
-url("img/aperture-vintage-lQTpCiZHYlU-unsplash-1.webp") 2x);
-}
-.bg-aperture-vintage-QI8Gk4vVYCY-unsplash{
-	background-image:url("img/aperture-vintage-QI8Gk4vVYCY-unsplash.jpg");
-	background-image: -webkit-image-set(url("img/aperture-vintage-QI8Gk4vVYCY-unsplash.webp") 1x,
-url("img/aperture-vintage-QI8Gk4vVYCY-unsplash.webp") 2x);background-image: image-set(url("img/aperture-vintage-QI8Gk4vVYCY-unsplash.jpg") 1x,
-url("img/aperture-vintage-QI8Gk4vVYCY-unsplash.jpg") 2x,url("img/aperture-vintage-QI8Gk4vVYCY-unsplash.webp") 1x,
-url("img/aperture-vintage-QI8Gk4vVYCY-unsplash.webp") 2x);
-}
-.bg-aperture-vintage-lQTpCiZHYlU-unsplash{
-	background-image:url("img/aperture-vintage-lQTpCiZHYlU-unsplash.jpg");
-	background-image: -webkit-image-set(url("img/aperture-vintage-lQTpCiZHYlU-unsplash.webp") 1x,
-url("img/aperture-vintage-lQTpCiZHYlU-unsplash.webp") 2x);background-image: image-set(url("img/aperture-vintage-lQTpCiZHYlU-unsplash.jpg") 1x,
-url("img/aperture-vintage-lQTpCiZHYlU-unsplash.jpg") 2x,url("img/aperture-vintage-lQTpCiZHYlU-unsplash.webp") 1x,
-url("img/aperture-vintage-lQTpCiZHYlU-unsplash.webp") 2x);
+.bg-steve-johnson-PHSKNnUNj5c-unsplash-1{
+	background-image:url("img/steve-johnson-PHSKNnUNj5c-unsplash-1.jpg");
+	background-image: -webkit-image-set(url("img/steve-johnson-PHSKNnUNj5c-unsplash-1.webp") 1x,
+url("img/steve-johnson-PHSKNnUNj5c-unsplash-1.webp") 2x);background-image: image-set(url("img/steve-johnson-PHSKNnUNj5c-unsplash-1.jpg") 1x,
+url("img/steve-johnson-PHSKNnUNj5c-unsplash-1.jpg") 2x,url("img/steve-johnson-PHSKNnUNj5c-unsplash-1.webp") 1x,
+url("img/steve-johnson-PHSKNnUNj5c-unsplash-1.webp") 2x);
 }
 
-/* = Custom Bric Data
--------------------------------------------------------------- */
-
-.waves-container {
-	max-width: 100%;
-	overflow: hidden;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 99999;
-}
-.waves-container canvas {
-	display: block;
-}
 
 
 /* = Bloc Padding Multi Breakpoint
@@ -678,14 +703,6 @@ url("img/aperture-vintage-lQTpCiZHYlU-unsplash.webp") 2x);
 	.hero-subheader{
 		font-size:30px;
 	}
-	.app-shadow{
-	}
-	.cta-card{
-	}
-	.feature-details-col{
-		margin-bottom:40px;
-		text-align:center;
-	}
 	
 }
 
@@ -696,17 +713,6 @@ url("img/aperture-vintage-lQTpCiZHYlU-unsplash.webp") 2x);
 	.hero-subheader{
 		font-size:22px;
 	}
-	.app-shadow{
-	}
-	.cta-card{
-		padding:30px 30px 0px 30px;
-	}
-	.feature-details-col{
-		text-align:center;
-	}
-	.feat-card{
-		margin-bottom:60px;
-	}
 	
 }
 
@@ -714,10 +720,8 @@ url("img/aperture-vintage-lQTpCiZHYlU-unsplash.webp") 2x);
 	.hero-header-text{
 		font-size:50px;
 	}
-	.app-shadow{
-	}
-	.cta-card{
-		padding:20px 20px 0px 20px;
+	.navbar-logo{
+		font-size:18px;
 	}
 	
 }

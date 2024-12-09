@@ -2,24 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url>
 	<loc>https://sarthihan.github.io</loc>
-	<lastmod>2024-02-20</lastmod>
+	<lastmod>2024-12-09</lastmod>
 	<changefreq>Weekly</changefreq>
 	<priority>1.0</priority>
 	<image:image>
-	<image:loc>https://sarthihan.github.io/img/iPhone%2014%20%26%2015%20Pro%20Max%20@2x.png</image:loc>
-	<image:title>iPhone 14 &amp; 15 Pro Max @2x</image:title>
+	<image:loc>https://sarthihan.github.io/img/297_1x_shots_so.png</image:loc>
+	<image:title>297_1x_shots_so</image:title>
 	</image:image>
 	<image:image>
-	<image:loc>https://sarthihan.github.io/img/iPhone%2014%20%26%2015%20Pro%20Max%20@2x.webp</image:loc>
-	<image:title>iPhone 14 &amp; 15 Pro Max @2x</image:title>
+	<image:loc>https://sarthihan.github.io/img/297_1x_shots_so.webp</image:loc>
+	<image:title>297_1x_shots_so</image:title>
 	</image:image>
 	<image:image>
-	<image:loc>https://sarthihan.github.io/img/</image:loc>
-	<image:title>Twitter Social Card Image</image:title>
+	<image:loc>https://sarthihan.github.io/img/492_1x_shots_so.png</image:loc>
+	<image:title>492_1x_shots_so</image:title>
 	</image:image>
 	<image:image>
-	<image:loc>https://sarthihan.github.io/img/</image:loc>
-	<image:title>Facebook Social Card Image</image:title>
+	<image:loc>https://sarthihan.github.io/img/492_1x_shots_so.webp</image:loc>
+	<image:title>492_1x_shots_so</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://sarthihan.github.io/img/66_1x_shots_so.png</image:loc>
+	<image:title>placeholder image</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://sarthihan.github.io/img/66_1x_shots_so.webp</image:loc>
+	<image:title>placeholder image</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://sarthihan.github.io/img/518_1x_shots_so.png</image:loc>
+	<image:title>518_1x_shots_so</image:title>
+	</image:image>
+	<image:image>
+	<image:loc>https://sarthihan.github.io/img/518_1x_shots_so.webp</image:loc>
+	<image:title>518_1x_shots_so</image:title>
 	</image:image>
 </url>
 </urlset>
